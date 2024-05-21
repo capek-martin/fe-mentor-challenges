@@ -1,0 +1,66 @@
+// Variables
+$primary-color: hsl(4, 100%, 67%);
+$secondary-color: hsl(0, 0%, 100%);
+$text-color: hsl(234, 29%, 20%);
+// $background-color: hsl(235, 18%, 26%);
+$background-color: #36384e;
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+p, li {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+.custom-list {
+  list-style: none;
+  li {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.custom-list li:before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1rem;
+  background-image: url("./assets/images/icon-list.svg");
+  background-size: contain;
+  margin-right: 1rem;
+}
+
+div > input {
+  border: 1px solid #bbb;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+div > input.error {
+  background-color: hsl(0, 77%, 85%);
+  border-color: $primary-color;
+  outline-color: $primary-color;
+}
+
+button.btn {
+  background-color: $background-color;
+  padding: 1rem;
+  color: $secondary-color;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+button.btn:hover {
+  background-color: $primary-color;
+}
